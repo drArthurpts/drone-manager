@@ -6,6 +6,7 @@ const pacoteRoutes = require('./src/routes/pacote.routes');
 const droneRoutes = require('./src/routes/drone.routes');
 const simuladorRoutes = require('./src/routes/simulador.routes');
 const swaggerUi = require('swagger-ui-express');
+const relatorioRoutes = require('./src/routes/relatorio.routes');
 const swaggerSpec = require('./src/docs/swaggerConfig');
 const app = express();
 
@@ -14,6 +15,7 @@ app.use('/pacotes', pacoteRoutes);
 app.use('/drones', droneRoutes);
 app.use('/simular', simuladorRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/relatorio', relatorioRoutes);
 
 
 app.get('/', (req, res) => {
