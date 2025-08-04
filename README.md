@@ -110,19 +110,6 @@ Drone 2 [cdf9]: ■ (1)
 Drone 3 [e7f12]:  (0)
 ```
 
----
-
-## 💡 Possíveis Melhorias Futuras
-
-- Testes automatizados com Jest
-- Mapa de entregas via coordenadas
-- Dashboard com métricas em frontend
-- Persistência do plano de voo
-- Recarga automática de bateria
-- Fila de entregas por prioridade + chegada
-
----
-
 ## 👨‍💻 Autor
 
 Arthur Abreu — [LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)
