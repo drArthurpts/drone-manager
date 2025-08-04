@@ -52,7 +52,6 @@ const RelatorioController = {
                 totalDrones,
                 totalPacotesEntregues: totalEntregues,
                 droneMaisEficiente,
-                tempoMedioEstimado: `${tempoMedioEstimado} km`,
                 dronesSemEntrega,
                 graficoAscii: ascii.trim().split('\n')
 

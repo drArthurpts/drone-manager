@@ -18,7 +18,7 @@ const SimuladorController = {
                 drones
             });
         } catch (error) {
-            console.error('Erro na simulação:', error);
+            
             return res.status(500).json({ erro: 'Erro ao simular entregas' });
         }
     }
