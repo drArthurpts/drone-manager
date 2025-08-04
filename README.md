@@ -119,7 +119,7 @@ Ao rodar os testes, o console exibe os resultados e status de cada rota testada.
 
 ## 📚 Documentação Swagger
 
-Acesse: [`/api-docs`](http://localhost:3000/api-docs)
+Acesse: [`http://localhost:3000/api-docs`](http://localhost:3000/api-docs)
 
 > Descreve todos os endpoints, corpos esperados e exemplos.
 
