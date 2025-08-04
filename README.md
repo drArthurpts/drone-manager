@@ -1,3 +1,4 @@
+
 # 🚁 Simulador de Encomendas em Drone
 
 Este projeto simula a alocação de pacotes em drones para entregas urbanas, considerando regras de capacidade, alcance, distância e prioridade.
@@ -8,6 +9,7 @@ Este projeto simula a alocação de pacotes em drones para entregas urbanas, con
 - MongoDB Atlas + Mongoose
 - Swagger (Documentação automática)
 - ASCII Charts (relatório visual)
+- Jest + Supertest (testes automatizados)
 - Estrutura modular (MVC)
 - RESTful API
 
@@ -33,7 +35,7 @@ npm install
 Crie um arquivo `.env` com:
 
 ```
-MONGO_URI=mongodb+srv://admin:admin@cluster0.2y48gzu.mongodb.net/simulador?retryWrites=true&w=majority&appName=Cluster0  # deixado aqui diretamente para facilitar a avaliação
+MONGO_URI=mongodb+srv://admin:admin@cluster0.2y48gzu.mongodb.net/simulador?retryWrites=true&w=majority&appName=Cluster0  #diretamente pra facilitar os testes
 PORT=3000
 ```
 
@@ -90,6 +92,28 @@ Swagger: `http://localhost:3000/api-docs`
 - Localização `x` e `y` devem ser números
 - Drones devem ter capacidade, alcance e localização válidos
 - Bateria do drone deve estar entre 0 e 100 (opcional)
+
+---
+
+## 🔍 Testes Automatizados
+
+O projeto inclui testes usando `Jest` e `Supertest` para validar a API:
+
+### Executar os testes
+
+```bash
+npm test
+```
+
+### Testes cobrem:
+
+- ✅ Cadastro e listagem de pacotes (`/pacotes`)
+- ✅ Cadastro e listagem de drones (`/drones`)
+- ✅ Simulação de entregas (`/simular`)
+- ✅ Cálculo de distâncias
+- ✅ Validações de campos obrigatórios e limites
+
+Ao rodar os testes, o console exibe os resultados e status de cada rota testada.
 
 ---
 
