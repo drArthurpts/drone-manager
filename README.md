@@ -35,7 +35,7 @@ npm install
 Crie um arquivo `.env` com:
 
 ```
-MONGO_URI=mongodb+srv://admin:admin@cluster0.2y48gzu.mongodb.net/simulador?retryWrites=true&w=majority&appName=Cluster0  #diretamente pra facilitar os testes
+MONGO_URI=mongodb+srv://admin:admin@cluster0.2y48gzu.mongodb.net/simulador?retryWrites=true&w=majority&appName=Cluster0  
 PORT=3000
 ```
 
