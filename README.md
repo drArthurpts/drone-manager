@@ -136,6 +136,6 @@ Drone 3 [e7f12]:  (0)
 
 ## 👨‍💻 Autor
 
-Arthur Abreu — [LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)
+Arthur Abreu — [LinkedIn](https://www.linkedin.com/in/arthur-abreu03/) | [Telefone]((38)99731-2653)
 
 ---
