@@ -1,11 +1,7 @@
 const Drone = require('../models/Drone');
 const Pacote = require('../models/Pacote');
+const { calcularDistancia } = require('../utils/distance');
 
-function calcularDistancia(pontoA, pontoB) {
-    const dx = pontoA.x - pontoB.x;
-    const dy = pontoA.y - pontoB.y;
-    return Math.sqrt(dx * dx + dy * dy);
-}
 
 const prioridades = { alta: 3, media: 2, baixa: 1 };
 

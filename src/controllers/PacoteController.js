@@ -40,7 +40,6 @@ const PacoteController = {
             return res.status(500).json({ erro: 'Erro ao buscar pacotes' });
         }
     }
-
 };
 
 module.exports = PacoteController;
