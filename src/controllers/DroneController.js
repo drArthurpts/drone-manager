@@ -46,6 +46,45 @@ const DroneController = {
         } catch (error) {
             return res.status(500).json({ erro: 'Erro ao buscar drones' });
         }
+    },
+    async atualizar(req, res) {
+        try {
+            const { id } = req.params;
+            const { capacidadeKg, alcanceKm, localizacao, bateria } = req.body;
+
+            const drone = await Drone.findByIdAndUpdate(
+                id,
+                { capacidadeKg, alcanceKm, localizacao, bateria },
+                { new: true, runValidators: true }
+            );
+
+            if (!drone) {
+                return res.status(404).json({ erro: 'Drone não encontrado.' });
+            }
+
+            return res.json({
+                mensagem: '✏️ Drone atualizado com sucesso!',
+                drone
+            });
+        } catch (error) {
+            console.error('Erro ao atualizar drone:', error);
+            return res.status(400).json({ erro: 'Erro ao atualizar drone' });
+        }
+    },
+    async deletar(req, res) {
+        try {
+            const { id } = req.params;
+            const drone = await Drone.findByIdAndDelete(id);
+
+            if (!drone) {
+                return res.status(404).json({ erro: 'Drone não encontrado.' });
+            }
+
+            return res.json({ mensagem: '🗑️ Drone deletado com sucesso!' });
+        } catch (error) {
+            console.error('Erro ao deletar drone:', error);
+            return res.status(400).json({ erro: 'Erro ao deletar drone' });
+        }
     }
 };
 
